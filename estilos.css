@@ -6,6 +6,10 @@ body {
   font-family: monospace;
 }
 
+ html, body{ /*Limita os fantasmas a tela */
+  min-height: 100%;
+}
+
 h1, h2 {
   margin: 0;
 }
@@ -81,6 +85,32 @@ main {
   padding-bottom: 3em;
 }
 
+main .boo{
+  position:fixed;
+  opacity:0.45;
+  width:40px;
+}
+
+main .boo:hover{
+  opacity: 1;
+}
+
+#boo1{
+  top:10%;
+  left:10%;
+}
+
+#boo2{
+  top:60%;
+  left:85%;
+  transform: scaleX(-1);
+}
+
+#boo3{
+  top:80%;
+  left:15%;
+}
+
 
 
 
@@ -99,10 +129,21 @@ main {
   margin-left: 2.5%;
   margin-right: 2.5%;
   display: inline-block;
+  position:relative;
 }
 
 #posts-principais .post .titulo {
   text-shadow: 1px 1px black;
+  position:absolute;
+  top: 20px;
+  opacity:0;
+}
+
+#posts-principais .post:hover .titulo{
+  top: 6px;
+  background-color: rgba(255, 255, 255, 0.5);
+  opacity:1;
+  transition: 600ms ease;
 }
 
 #posts-principais .post img {
@@ -143,7 +184,14 @@ main {
   display: inline-block;
 }
 
-
+.novidade::before{
+  content: "Novidade!";
+  display: inline-block;
+  background-color: green;
+  border-radius: 5px;
+  padding: 3px 5px;
+  box-shadow: 0 0 1em green;
+}
 
 
 
@@ -159,6 +207,8 @@ main {
   box-shadow: -4px 0 10px rgba(0, 0, 0, 0.5);
   text-align: center;
   box-sizing: border-box;
+  position:sticky;
+  top:0px;
 }
 
 #tags h1 {

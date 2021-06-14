@@ -96,6 +96,9 @@
           </h2>
         </article>
       </section>
+      <img src="imgs/boo1.gif" alt="" id="boo1" class="boo">
+      <img src="imgs/boo2.gif" alt="" id="boo2" class="boo">
+      <img src="imgs/boo3.gif" alt="" id="boo3" class="boo">
     </main>
 
     <footer>
@@ -135,7 +138,7 @@
 
     <script>
       // faz o vídeo desaparecer de leve assim que terminar
-      const TEMPO = 9000;  // 9s, duração do vídeo
+      const TEMPO = 1000;  // 9s, duração do vídeo
       setTimeout(() => {
         // faz o vídeo desaparecer colocando a classe .desaparecido
         document.querySelector('.backdrop').classList.add('desaparecido');
@@ -150,5 +153,6 @@
         e.currentTarget.classList.add('desaparecido');
       });
     </script>
+    <script src="boos.js"></script>
   </body>
 </html>
